@@ -17,9 +17,17 @@ export default class Container extends React.Component {
     this.state = { visible: this.props.visible };
   }
 
+  open() {
+    this.setState({ visible: true });
+  }
+
+  hide() {
+    this.setState({ visible: false });
+  }
+
   renderPanel() {
     return (
-      <div className={this.className([this.props.position])}>
+      <div className={this.className('Panel', [this.props.position])}>
         {this.props.children}
       </div>
     );
@@ -27,7 +35,11 @@ export default class Container extends React.Component {
 
   renderModal() {
     return (
-      <div>Container modal component</div>
+      <div className={this.className('Modal')}>
+        <div className={this.className('Modal__Dialog')}>
+          {this.props.children}
+        </div>
+      </div>
     );
   }
 

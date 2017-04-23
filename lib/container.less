@@ -1,36 +1,61 @@
 .Container {
-  position: absolute;
-  overflow-y: scroll;
+  &__Panel {
+    position: absolute;
+    overflow-y: scroll;
 
-  outline-style: solid;
-  outline-width: thin;
-  outline-color: lightgrey;
+    outline-style: solid;
+    outline-width: thin;
+    outline-color: lightgrey;
 
-  &--right {
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    width: auto;
+    &--right {
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: auto;
+    }
+
+    &--left {
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: auto;
+    }
+
+    &--top {
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: auto;
+    }
+
+    &--bottom {
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: auto;
+    }
   }
 
-  &--left {
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: auto;
-  }
+  &__Modal {
+    &:before {
+      content: '';
+      display: block;
+      background: rgba(0,0,0,.6);
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 10;
+    }
 
-  &--top {
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: auto;
-  }
-
-  &--bottom {
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: auto;
+    &__Dialog {
+      background: #fefefe;
+      border: lightgrey solid 1px;
+      border-radius: 4px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      width: 360px;
+    }
   }
 }
