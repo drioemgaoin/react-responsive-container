@@ -33,9 +33,6 @@ example/dist
 .idea/
 *.DS_Store
 
-# Ignore dist directory
-lib
-
 # Ignore generation npm package
 *.tgz
 
