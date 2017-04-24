@@ -19,18 +19,32 @@
   }
 }
 
+.Container__Panel {
+  outline: 0;
+
+  .Content__Body {
+    border: 1px solid #e5e5e5;
+  }
+}
+
+.Container__Modal {
+  .Content__Header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
 .Content {
-
-    &--right,
-    &--left {
-        width: auto;
-        height: 200px;
-    }
-
-    &--top,
-    &--bottom {
+    &--Right,
+    &--Left {
         width: 200px;
         height: auto;
+    }
+
+    &--Top,
+    &--Bottom {
+        width: auto;
+        height: 200px;
     }
 
     &__Header {
@@ -38,8 +52,6 @@
         line-height: 25px;
         background: #4DB6AC;
         border-top: 1px solid #4DB6AC;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
         padding: 5px;
 
         > button {
