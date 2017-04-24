@@ -2,7 +2,7 @@ import React from 'react';
 import bem from 'bem-classname';
 
 import {ContainerEnum} from '../constant';
-import '../container.less';
+import '../container';
 
 export default class Container extends React.Component {
   static defaultProps = {
@@ -14,7 +14,7 @@ export default class Container extends React.Component {
   constructor(props) {
     super(props);
 
-    this.className = bem.bind(null, this.constructor.name);
+    this.className = bem.bind(null, 'Container');
     this.state = { visible: this.props.visible };
   }
 
