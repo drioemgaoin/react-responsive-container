@@ -1,6 +1,7 @@
 import React from 'react';
 import bem from 'bem-classname';
 
+import {ContainerEnum} from '../constant';
 import '../container.less';
 
 export default class Container extends React.Component {
@@ -45,7 +46,7 @@ export default class Container extends React.Component {
 
   render() {
     if (this.props.visible) {
-      if (this.props.type === 'panel') {
+      if (this.props.type === ContainerEnum.Panel) {
         return this.renderPanel();
       } else {
         return this.renderModal();
