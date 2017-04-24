@@ -10,29 +10,21 @@
     &--Right {
       right: 0px;
       top: 0px;
-      height: 100%;
-      width: auto;
     }
 
     &--Left {
       left: 0px;
       top: 0px;
-      height: 100%;
-      width: auto;
     }
 
     &--Top {
       left: 0px;
       top: 0px;
-      width: 100%;
-      height: auto;
     }
 
     &--Bottom {
       left: 0px;
       bottom: 0px;
-      width: 100%;
-      height: auto;
     }
   }
 
@@ -55,6 +47,42 @@
       transform: translate(-50%, -50%);
       z-index: 11;
       width: 360px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .Container {
+    &__Panel {
+      width: 100%;
+
+      &--Right,
+      &--Left {
+        height: 100%;
+      }
+
+      &--Top,
+      &--Bottom {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .Container {
+    &__Panel {
+      &--Right,
+      &--Left {
+        height: 100%;
+        width: auto;
+      }
+
+      &--Top,
+      &--Bottom {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

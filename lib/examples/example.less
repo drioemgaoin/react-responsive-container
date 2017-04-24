@@ -20,6 +20,38 @@
   }
 }
 
+@media (max-width: 320px) {
+  .Content {
+    &--Right,
+    &--Left {
+        width: 100%;
+        height: auto;
+    }
+
+    &--Top,
+    &--Bottom {
+        width: 100%;
+        height: 200px;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .Content {
+    &--Right,
+    &--Left {
+        width: 200px;
+        height: auto;
+    }
+
+    &--Top,
+    &--Bottom {
+        width: auto;
+        height: 200px;
+    }
+  }
+}
+
 .Container__Modal {
   .Content {
     &__Header {
@@ -34,18 +66,6 @@
 }
 
 .Content {
-    &--Right,
-    &--Left {
-        width: 200px;
-        height: auto;
-    }
-
-    &--Top,
-    &--Bottom {
-        width: auto;
-        height: 200px;
-    }
-
     &__Header {
         height: 25px;
         line-height: 25px;
