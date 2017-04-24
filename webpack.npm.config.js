@@ -57,8 +57,8 @@ module.exports = {
   output: {
     // The build folder.
     path: paths.appLibrary,
-    filename: 'react-responsive-ui-toolbar.js',
-    library: 'ReactResponsiveUIToolbar',
+    filename: 'react-responsive-container.js',
+    library: 'ReactResponsiveContainer',
     libraryTarget: 'umd'
   },
   resolve: {
@@ -81,7 +81,6 @@ module.exports = {
   },
 
   module: {
-
       loaders: [
         {
           test: /\.less$/,
@@ -134,6 +133,6 @@ module.exports = {
   ],
 
   plugins: [
-    new ExtractTextPlugin("react-responsive-ui-toolbar.css")
+    new ExtractTextPlugin("react-responsive-container.css")
   ]
 };
