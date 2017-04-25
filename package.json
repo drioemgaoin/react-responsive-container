@@ -7,7 +7,7 @@
     "build": "node scripts/build-prod.js",
     "build:npm": "rimraf dist && webpack -d --config webpack.npm.config.js --progress",
     "prepublish": "npm run build:npm",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "author": {
     "name": "Romain Diegoni",
