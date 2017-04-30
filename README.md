@@ -25,3 +25,9 @@ require(['react', 'ReactResponsiveContainer'], function(React, ReactResponsiveCo
 * Continuously run tests on file changes `npm run watch-test`;
 * Run tests: `npm test`;
 * Build `npm run build`;
+
+## License
+
+PUT LICENSE HERE
+
+Copyright (c) 2017 Romain Diegoni.
