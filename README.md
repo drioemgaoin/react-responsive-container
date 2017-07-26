@@ -1,29 +1,30 @@
+<<<<<<< HEAD
 DON'T USE UNTIL VERSION 1.1.0!!!!
 
 # react responsive container
+=======
+Don't use it until the version 1.1.0
+>>>>>>> 94b0c122021bc5c997c7bebcd4d5db22e340e2df
 
-Get the AMD module located at `react-responsive-container.js` and include it in your project.
+[Live Demo](https://react-responsive-container.herokuapp.com/)
 
-Here is a sample integration:
+___
+React Responsive Container is panel and modal position in some specific place on the page with a default style.
 
-```js
-require.config({
-  paths: {
-    'react': 'vendor/bower_components/react/react',
-    'ReactResponsiveContainer': 'react-responsive-container'
-  }
-});
-
-require(['react', 'ReactResponsiveContainer'], function(React, ReactResponsiveContainer) {
-
-  React.render(React.createElement(ReactResponsiveContainer), document.getElementById('widget-container'));
-
-});
+# Installation
+To install this component, you can
+- clone the repository itself and run the right command following the environment:
+```
+In Development
+$ npm run start
+```
+```
+In Production
+$ npm run build
+$ npm run start
 ```
 
-## Development
-
-* Development server `npm start`.
-* Continuously run tests on file changes `npm run watch-test`;
-* Run tests: `npm test`;
-* Build `npm run build`;
+- Install the npm package available [here](https://www.npmjs.com/package/react-responsive-ux-container) by running the following command in your project
+```
+$ npm install --save react-responsive-ux-container
+```
