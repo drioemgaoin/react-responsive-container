@@ -1,3 +1,5 @@
+DON'T USE UNTIL VERSION 1.1.0!!!!
+
 # react responsive container
 
 Get the AMD module located at `react-responsive-container.js` and include it in your project.

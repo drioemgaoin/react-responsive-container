@@ -1,93 +1,101 @@
-.Container {
-  &__Panel {
-    position: absolute;
-    overflow-y: scroll;
+.container {
+    &__panel {
+        position: absolute;
+        overflow-y: scroll;
 
-    outline-style: solid;
-    outline-width: thin;
-    outline-color: #e5e5e5;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #999;
+        border: 1px solid rgba(0,0,0,.2);
+        outline: 0;
 
-    &--Right {
-      right: 0px;
-      top: 0px;
+        &--Right {
+            right: 0px;
+            top: 0px;
+        }
+
+        &--Left {
+            left: 0px;
+            top: 0px;
+        }
+
+        &--Top {
+            left: 0px;
+            top: 0px;
+        }
+
+        &--Bottom {
+            left: 0px;
+            bottom: 0px;
+        }
     }
 
-    &--Left {
-      left: 0px;
-      top: 0px;
-    }
+    &__modal {
+        opacity: 1;
+        overflow: auto;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
 
-    &--Top {
-      left: 0px;
-      top: 0px;
-    }
+        &__dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
 
-    &--Bottom {
-      left: 0px;
-      bottom: 0px;
+            .Content {
+                margin: 0 auto;
+                position: relative;
+                background-color: #fff;
+                border: 1px solid #999;
+                border: 1px solid rgba(0,0,0,.2);
+                border-radius: 6px;
+                -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                background-clip: padding-box;
+                outline: 0;
+            }
+        }
     }
-  }
-
-  &__Modal {
-    &:before {
-      content: '';
-      display: block;
-      background: rgba(0,0,0,.6);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 10;
-    }
-
-    &__Dialog {
-      overflow-y: scroll;
-      background: #fefefe;
-      border-radius: 4px;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 11;
-      height: auto;
-      max-height: 100%;
-    }
-  }
 }
 
 @media (max-width: 320px) {
-  .Container {
-    &__Panel {
-      width: 100%;
+    .container {
+        &__panel {
+            width: 100%;
 
-      &--Right,
-      &--Left {
-        height: 100%;
-      }
+            &--Right,
+            &--Left {
+                height: 100%;
+            }
 
-      &--Top,
-      &--Bottom {
-        height: auto;
-      }
+            &--Top,
+            &--Bottom {
+                height: auto;
+            }
+        }
     }
-  }
 }
 
 @media (min-width: 320px) {
-  .Container {
-    &__Panel {
-      &--Right,
-      &--Left {
-        height: 100%;
-        width: auto;
-      }
+    .container {
+        &__panel {
+            &--Right,
+            &--Left {
+                height: 100%;
+                width: auto;
+            }
 
-      &--Top,
-      &--Bottom {
-        width: 100%;
-        height: auto;
-      }
+            &--Top,
+            &--Bottom {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
-  }
 }
