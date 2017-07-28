@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-ux-container",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React container displayed either as modal or panel",
   "scripts": {
     "start": "node scripts/start.js",

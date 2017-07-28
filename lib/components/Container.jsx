@@ -19,7 +19,7 @@ export default class Container extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.visible !== this.props.visible) {
+        if (nextProps.visible !== this.props.visible && nextProps.type === ContainerEnum.Modal) {
             if (nextProps.visible) {
                 const initial = document.body.className;
                 document.body.className = initial + (initial ? ' ' : '') + 'modal-open';
