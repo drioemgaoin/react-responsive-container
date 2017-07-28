@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-DON'T USE UNTIL VERSION 1.1.0!!!!
-
-# react responsive container
-=======
 Don't use it until the version 1.1.0
->>>>>>> 94b0c122021bc5c997c7bebcd4d5db22e340e2df
 
 [Live Demo](https://react-responsive-container.herokuapp.com/)
 

@@ -27,34 +27,42 @@ export default class Container extends React.Component {
     }
 
     renderPanel() {
-        const className = classnames('container__panel', this.props.classname);
+        const className = classnames('responsive-container__panel', this.props.classname);
         return (
-            <div className={bem('container__panel', [this.props.position])}>
+            <div className={bem('responsive-container__panel', [this.props.position])}>
                 {this.props.children}
             </div>
         );
     }
 
     renderModal() {
-        const className = classnames('container__modal', this.props.classname);
+        const className = classnames('responsive-container__modal', this.props.classname);
         return (
             <div className={className}>
-                <div className='container__modal__dialog'>
-                    {this.props.children}
+                <div className='responsive-container__modal__dialog'>
+                    <div className='responsive-container__modal__dialog__content'>
+                        {this.props.children}
+                    </div>
                 </div>
             </div>
         );
     }
 
     render() {
-        if (this.props.visible) {
-            if (this.props.type === ContainerEnum.Panel) {
-                return this.renderPanel();
-            } else {
-                return this.renderModal();
-            }
-        }
-
-        return null;
+        const className = classnames('responsive-container', this.props.classname);
+        return (
+            <div className={className}>
+                {
+                    this.props.visible && 
+                    this.props.type === ContainerEnum.Panel &&
+                    this.renderPanel()
+                }
+                {
+                    this.props.visible && 
+                    this.props.type === ContainerEnum.Modal &&
+                    this.renderModal()
+                }
+            </div>
+        )
     }
 }
