@@ -1,3 +1,9 @@
+body {
+    &.modal-open {
+        overflow: hidden;
+    }
+}
+
 .responsive-container {
     &__panel {
         position: absolute;
@@ -31,27 +37,24 @@
     }
 
     &__modal {
+        z-index: 1050;
         opacity: 1;
         position: fixed;
-        top: 0;
+        top: 50%;
+        left: 50%;
         right: 0;
         bottom: 0;
-        left: 0;
-        z-index: 1050;
         outline: 0;
-        display:table;
         width: 100%;
         height: 100%;
 
         &__dialog {
-            display:table-cell; 
-            vertical-align:middle; 
+            transform: translate(-50%, -50%);
 
             &__content {
-                display: block;
-                overflow-y: scroll;
-                max-height: 100%;
-
+                -webkit-overflow-scrolling: touch;
+                overflow-y: auto;
+                max-height: 90vh;
                 margin: 0 auto;
                 background-color: #fff;
                 border: 1px solid #999;

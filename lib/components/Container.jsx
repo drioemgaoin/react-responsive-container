@@ -18,8 +18,15 @@ export default class Container extends React.Component {
         this.state = { visible: this.props.visible };
     }
 
-    open() {
-        this.setState({ visible: true });
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.visible !== this.props.visible) {
+            if (nextProps.visible) {
+                const initial = document.body.className;
+                document.body.className = initial + (initial ? ' ' : '') + 'modal-open';
+            } else {
+                document.body.className = document.body.className.replace(/ ?modal-open/, '');
+            }
+        }
     }
 
     hide() {
